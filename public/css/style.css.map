@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../sass/utils/_variables.scss"],"names":[],"mappings":"AAEA;EACI,OAHI","file":"style.css"}
+{"version":3,"sourceRoot":"","sources":["../../sass/utils/_variables.scss","../../sass/layout/_header.scss","../../sass/pages/_place.scss"],"names":[],"mappings":"AAEA;EACI,OAHI;;;ACAR;EAEA;IACI;IACA;;EACA;IACI;IACA;;EAEJ;IACI;IACA;;;ACVR;EACI;EACA;EACA;;;AAEA;EACA;EACA;EACA;EACA;;AACI;EACA;;AAEA;EACA","file":"style.css"}
