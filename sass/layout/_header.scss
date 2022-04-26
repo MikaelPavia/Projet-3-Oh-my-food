@@ -1,0 +1,16 @@
+@media all and (max-width: 768px) {
+
+.header {
+    display: flex;
+    justify-content: center;
+    &__logo {
+        background-color: red;
+        width: 200px;
+    }
+    &__logo img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+}
