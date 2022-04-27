@@ -1,14 +1,12 @@
 
 .place_banner {
+    @include layout-header;
     background-color: red;
-    display: flex;
-    justify-content: center;
     }
     .place_banner__bloc{
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    background-color: blue;
+        @include layout-header;
+        width: 50%;
+        background-color: blue;
         &__icon {
         background-color: red;
         }

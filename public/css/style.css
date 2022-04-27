@@ -1,38 +1,18 @@
-title {
-  color: red;
-}
+/* Error: Undefined mixin.
+ *   ,
+ * 3 |     @include layout-header;
+ *   |     ^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   sass\pages\_place.scss 3:5  @import
+ *   sass\main.scss 3:9          root stylesheet */
 
-@media all and (max-width: 768px) {
-  .header {
-    display: flex;
-    justify-content: center;
-  }
-  .header__logo {
-    background-color: red;
-    width: 200px;
-  }
-  .header__logo img {
-    width: 100%;
-    height: 100%;
-  }
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a   \2577 \a 3 \2502      @include layout-header;\d\a   \2502      ^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass\\pages\\_place.scss 3:5  @import\a   sass\\main.scss 3:9          root stylesheet";
 }
-.place_banner {
-  background-color: red;
-  display: flex;
-  justify-content: center;
-}
-
-.place_banner__bloc {
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  background-color: blue;
-}
-.place_banner__bloc__icon {
-  background-color: red;
-}
-.place_banner__bloc__text {
-  background-color: green;
-}
-
-/*# sourceMappingURL=style.css.map */
