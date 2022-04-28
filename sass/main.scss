@@ -1,5 +1,8 @@
+@import "./layout/general-style";
 @import "./utils/variables";
 @import "./layout/header";
 @import "./pages/place";
 @import "./utils/mixins";
-@import "./pages/reserve"
+@import "./pages/reserve";
+@import "./layout/normalize";
+@import "./components/button"
