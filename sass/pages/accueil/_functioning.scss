@@ -27,7 +27,7 @@
         @include shadow;
         width: 88%;
         font-size: 1.15rem;
-        
+
 
         &:hover {
             background-color: lighten($color: $color-primary, $amount: 35);
@@ -38,7 +38,7 @@
             }
         }
 
-        
+
     }
 
     i {
@@ -64,7 +64,7 @@
     &__steps__element__content {
         display: flex;
         justify-content: space-around;
-        width: 60%;
+        width: 80%;
         font-size: 1.2rem;
         font-weight: bold;
         position: absolute;
@@ -85,14 +85,15 @@
 
             &__element {
                 width: 25%;
+
                 &--1 {
                     margin-left: 15%;
                 }
-        
+
                 &--2 {
                     margin-left: 35%;
                 }
-        
+
                 &--3 {
                     margin-left: 55%;
                 }

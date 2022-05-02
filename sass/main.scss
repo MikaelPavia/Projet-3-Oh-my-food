@@ -2,12 +2,14 @@
 @import "./utils/mixins";
 @import "./base/normalize";
 @import "./base/general-style";
+@import "./base/typography";
+@import "./components/card";
+@import "./components/button";
 @import "./layout/header";
+@import "./layout/footer";
 @import "./pages/accueil/place";
 @import "./pages/accueil/reserve";
-@import "./components/button";
 @import "./pages/accueil/functioning";
 @import "./pages/accueil/restaurants__section";
-@import "./components/card";
 @import "./pages/menus/menu.scss";
-@import "./layout/footer";
+
