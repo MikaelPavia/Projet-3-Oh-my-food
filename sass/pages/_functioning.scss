@@ -3,7 +3,7 @@
         margin-top: 50px;
         &__h2 {
             width: 60%;
-            margin-left: 15px;
+            margin-left: 25px;
         }
         &__steps {
             display: flex;
@@ -24,10 +24,19 @@
             background-color: rgb(248, 248, 248);
             box-shadow: 2px 2px 5px rgb(22, 22, 22, 0.3);
             position: relative;
+            &:hover {
+                background-color: lighten($color: $color-primary, $amount: 35);
+                & i {
+                    color: $color-primary;
+                }
+            }
         }
         i {
             font-size: 1.3rem;
             color: rgb(148, 148, 148);
+            // @if ( functioning__steps__element: background-color lighten($color: $color-primary, $amount: 35)) {
+            //     color: $color-primary;
+            // }
         }
         p {
             border: 0;
