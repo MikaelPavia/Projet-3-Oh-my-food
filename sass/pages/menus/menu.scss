@@ -1,0 +1,48 @@
+.menu__section__image {
+    background-color: red;
+    height: 200px;
+    width: 100%;
+
+    & img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.menu {
+    background-color: rgb(250, 250, 250);
+    background-color: red;
+    border-radius: 30px;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &__h2 {
+        background-color: blue;
+    }
+
+    &__dish {
+        background-color: green;
+        width: 90%;
+        border-radius: 15px;
+        height: 70px;
+    }
+}
+
+.dish__type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 85%;
+    justify-content: space-around;
+}
+
+.dish__comment__price {
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+}
