@@ -451,6 +451,7 @@ h1 {
 }
 .header i {
   font-size: 1.5rem;
+  width: 20%;
 }
 .header__bloc {
   display: flex;
