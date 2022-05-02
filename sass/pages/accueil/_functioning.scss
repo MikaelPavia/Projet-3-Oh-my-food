@@ -1,66 +1,110 @@
-@media all and (max-width: 768px) {
-    .functioning {
-        margin-top: 50px;
-        &__h2 {
-            width: 60%;
-            margin-left: 25px;
-        }
-        &__steps {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            height: 280px;
-            
-        }
-        &__steps__element {
-            display: flex;
-            align-items: center;
-            height: 70px;
-            width: 88%;
-            border-radius: 25px;
-            font-size: 1.15rem;
-            position: relative;
-            background-color: rgb(248, 248, 248);
-            box-shadow: 2px 2px 5px rgb(22, 22, 22, 0.3);
-            position: relative;
-            &:hover {
-                background-color: lighten($color: $color-primary, $amount: 35);
-                & i {
-                    color: $color-primary;
-                }
+.functioning {
+    margin-top: 50px;
+    width: 100%;
+    &__h2 {
+        width: 60%;
+        font-size: 1.5rem;
+        padding-left: 30px;
+    }
+
+    &__steps {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 400px;
+        width: 100%;
+    }
+
+    &__steps__element {
+        display: flex;
+        align-items: center;
+        height: 70px;
+        width: 25%;
+        border-radius: 25px;
+        position: relative;
+        background-color: rgb(248, 248, 248);
+        box-shadow: 2px 2px 5px rgb(22, 22, 22, 0.3);
+
+        &:hover {
+            background-color: lighten($color: $color-primary, $amount: 35);
+            cursor: pointer;
+
+            & i {
+                color: $color-primary;
             }
         }
+
+        &--1 {
+            margin-left: 15%;
+        }
+        &--2 {
+            margin-left: 35%;
+        }
+        &--3 {
+            margin-left: 55%;
+        }
+    }
+
+    i {
+        font-size: 1.5rem;
+        color: rgb(148, 148, 148);
+    }
+
+    p {
+        border: 0;
+        width: 29px;
+        height: 29px;
+        border-radius: 15px;
+        background-color: $color-primary;
+        color: white;
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: -13px;
+    }
+
+    &__steps__element__content {
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+        font-size: 1.2rem;
+        font-weight: bold;
+        position: absolute;
+        left: 50px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .functioning {
+
+        &__steps {
+            flex-direction: column;
+            height: 280px;
+            align-items: center;
+        }
+
+        &__steps__element {
+            width: 88%;
+            font-size: 1.15rem;
+            &--1 {
+                margin-left: unset;
+            }
+            &--2 {
+                margin-left: unset;
+            }
+            &--3 {
+                margin-left: unset;
+            }
+        }
+
         i {
             font-size: 1.3rem;
-            color: rgb(148, 148, 148);
-            // @if ( functioning__steps__element: background-color lighten($color: $color-primary, $amount: 35)) {
-            //     color: $color-primary;
-            // }
-        }
-        p {
-            border: 0;
-            width: 29px;
-            height: 29px;
-            border-radius: 15px;
-            background-color: $color-primary;
-            color: white;
-            font-size: 0.95rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            left: -13px;
         }
         &__steps__element__content {
-            display: flex;
-            justify-content: space-around;
-            align-items: baseline;
-            width: 60%;
-            font-size: 0.95rem;
-            font-weight: bold;
-            position: absolute;
-            left: 30px;
+            font-size: 1.2rem;
+            left: 50px;
         }
     }
 }

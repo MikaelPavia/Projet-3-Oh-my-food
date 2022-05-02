@@ -1,25 +1,42 @@
+.place_banner {
+    // @include layout-header;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin-top: 1px;
+    margin-left: 30px;
+
+    & i {
+        font-size: 1.7rem;
+    }
+
+    .place_banner__bloc {
+        margin-left: 15px;
+        display: flex;
+        justify-content: center;
+        width: 10%;
+
+        &__text {
+            font-size: 1.3rem;
+        }
+    }
+}
+
 @media all and (max-width: 768px) {
 
 
     .place_banner {
-        // @include layout-header;
-        display: flex;
         justify-content: center;
-        align-items: center;
         background-color: rgb(233, 233, 233);
-        height: 50px;
-        margin-top: 1px;
-
+        margin-left: unset;
         & i {
             font-size: 1.1rem;
         }
 
         .place_banner__bloc {
-            // @include layout-header;
-            display: flex;
-            justify-content: center;
             width: 40%;
-
+            margin-left: unset;
+            
             &__text {
                 font-size: 1.2rem;
             }
