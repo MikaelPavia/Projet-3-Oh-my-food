@@ -1,45 +1,42 @@
+@media all and (min-width: 992px) {
+    .place_banner {
+        margin-left: 30px;
+        & i {
+            font-size: 1.7rem;
+        }
+        .place_banner__bloc {
+            width: 10%;
+            margin-left: 15px;
+            &__text {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
 .place_banner {
     // @include layout-header;
     display: flex;
     align-items: center;
     height: 50px;
     margin-top: 1px;
-    margin-left: 30px;
+    justify-content: center;
+    background-color: rgb(233, 233, 233);
 
     & i {
-        font-size: 1.7rem;
+        font-size: 1.1rem;
     }
 
     .place_banner__bloc {
-        margin-left: 15px;
+        
         display: flex;
         justify-content: center;
-        width: 10%;
+        width: 40%;
 
         &__text {
             font-size: 1.3rem;
-        }
-    }
-}
 
-@media all and (max-width: 768px) {
-
-
-    .place_banner {
-        justify-content: center;
-        background-color: rgb(233, 233, 233);
-        margin-left: unset;
-        & i {
-            font-size: 1.1rem;
-        }
-
-        .place_banner__bloc {
-            width: 40%;
-            margin-left: unset;
-            
-            &__text {
-                font-size: 1.2rem;
-            }
+            font-size: 1.2rem;
         }
     }
 }

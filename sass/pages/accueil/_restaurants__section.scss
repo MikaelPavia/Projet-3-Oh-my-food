@@ -3,7 +3,7 @@
     height: auto;
     margin-top: 70px;
     padding-top: 40px;
-    padding-bottom: 200px;
+    padding-bottom: 80px;
     padding-left: 30px;
     padding-right: 30px;
     &__h2 {
@@ -16,21 +16,22 @@
     justify-content: space-between;
     height: auto;
     position: relative;
+    flex-direction: column;
 }
 
     
 a {
-    width: 20%;
+    width: 100%;
 }
-@media all and (max-width: 768px) {
+@media all and (min-width: 992px) {
     .cards__section {
-        padding-bottom: 80px;
+        padding-bottom: 200px;
     }
     .restaurants__list {
-        flex-direction: column;
+        flex-direction: unset;
     }
         
     a {
-        width: 100%;
+        width: 20%;
     }
 }

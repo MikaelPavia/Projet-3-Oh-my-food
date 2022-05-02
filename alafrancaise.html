@@ -12,136 +12,145 @@
 
 <body>
     <header class="header">
-        <li>
+        <div class="header__bloc header__bloc__element">
             <a href="index.html">
-                <i class="fa-solid fa-arrow-left-long"></i>
+                <i class="fa-solid fa-arrow-left-long  header__bloc__element"></i>
             </a>
-        </li>
-        <div class="header__logo">
-            <img src="assets/logo/ohmyfood.png" alt="Logo site Oh my food" />
+
+            <div class="header__logo">
+                <h1>ohmyfood</h1>
+            </div>
+
+            <div class="header__bloc__element"></div> <!-- Bloc servant à gérer l'espace avec flexbox -->
+
         </div>
     </header>
 
     <main class="container">
+
         <section class="menu__section">
+
             <div class="menu__section__image">
-                <img src="assets/restaurants/a la française.jpg" alt="Photo du restaurant La palette du goût">
+                <img src="assets/restaurants/a_la_française.jpg" alt="Photo du restaurant La palette du goût">
             </div>
 
-            <div class="menu">
+            <div class="section__menu">
 
-                <div class="menu__h2">À la française</div>
+                <h1 class="menu__h1">À la française</h1>
 
-                <div class="dish__type">
-                    <div class="menu__name">ENTRÉES</div>
+                <div class="menu">
+                    <div class="menu__name">ENTRÉES<div class="underline"></div></div>
+                    
+                    <div class="dish__type">
 
-                    <div class="menu__dish">
-                        <div class="dish__name">Tartare de poulpe acidulé</div>
 
-                        <div class="dish__comment__price">
-                            <div class="dish__comment">Aux zests d'orange</div>
-                            <div class="dish__price">25€</div>
+                        <div class="menu__dish">
+                            <div class="dish__name">Tartare de poulpe acidulé</div>
+
+                            <div class="dish__comment__price">
+                                <div class="dish__comment">Aux zests d'orange</div>
+                                <div class="dish__price">25€</div>
+                            </div>
+
+                        </div>
+
+                        <div class="menu__dish">
+                            <div class="dish__name">Velouté de légumes d'antan</div>
+
+                            <div class="dish__comment__price">
+                                <div class="dish__comment">Carotte, panais, topinambour</div>
+                                <div class="dish__price">35€</div>
+                            </div>
+
+                        </div>
+
+                        <div class="menu__dish">
+                            <div class="dish__name">Soupe à l'oignon</div>
+
+                            <div class="dish__comment__price">
+                                <div class="dish__comment">Revisitée</div>
+                                <div class="dish__price">20€</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="menu__name">PLATS<div class="underline"></div></div>
+                    <div class="dish__type">
+
+
+
+                        <div class="menu__dish">
+                            <div class="dish__name">Coquilles Saint-Jacques</div>
+
+                            <div class="dish__comment__price">
+                                <div class="dish__comment">Accompagnée d'une purée de panais</div>
+                                <div class="dish__price">40€</div>
+                            </div>
+
+                        </div>
+
+                        <div class="menu__dish">
+                            <div class="dish__name">Magret de canard</div>
+
+                            <div class="dish__comment__price">
+                                <div class="dish__comment">Et parmentier de pommes de terres</div>
+                                <div class="dish__price">35€</div>
+                            </div>
+
+                        </div>
+
+                        <div class="menu__dish">
+                            <div class="dish__name">Pigeonneau d'Ille-et-Vilaine</div>
+
+                            <div class="dish__comment__price">
+                                <div class="dish__comment">Sur son lit de gnocchis aux légumes</div>
+                                <div class="dish__price">44€</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="menu__name">DESSERTS<div class="underline"></div></div>
+                    <div class="dish__type">
+
+
+                        <div class="menu__dish">
+                            <div class="dish__name">Pétales de violettes glacés</div>
+
+                            <div class="dish__comment__price">
+                                <div class="dish__comment">Et purée de noisettes</div>
+                                <div class="dish__price">18€</div>
+                            </div>
+
+                        </div>
+
+                        <div class="menu__dish">
+                            <div class="dish__name">Fondant au chocolat</div>
+
+                            <div class="dish__comment__price">
+                                <div class="dish__comment">Revisité</div>
+                                <div class="dish__price">22€</div>
+                            </div>
+
+                        </div>
+
+                        <div class="menu__dish">
+                            <div class="dish__name">Milefeuille croustillant</div>
+
+                            <div class="dish__comment__price">
+                                <div class="dish__comment">Myrtilles et pâte d'amende</div>
+                                <div class="dish__price">23€</div>
+                            </div>
+
                         </div>
 
                     </div>
 
-                    <div class="menu__dish">
-                        <div class="dish__name">Velouté de légumes d'antan</div>
-
-                        <div class="dish__comment__price">
-                            <div class="dish__comment">Carotte, panais, topinambour</div>
-                            <div class="dish__price">35€</div>
-                        </div>
-
+                    <div class="command__btn">
+                        <button class="btn">Commander</button>
                     </div>
-
-                    <div class="menu__dish">
-                        <div class="dish__name">Soupe à l'oignon</div>
-
-                        <div class="dish__comment__price">
-                            <div class="dish__comment">Revisitée</div>
-                            <div class="dish__price">20€</div>
-                        </div>
-
-                    </div>
-
                 </div>
-
-                <div class="dish__type">
-
-                    <div class="menu__name">PLATS</div>
-
-                    <div class="menu__dish">
-                        <div class="dish__name">Coquilles Saint-Jacques</div>
-
-                        <div class="dish__comment__price">
-                            <div class="dish__comment">Accompagnée d'une purée de panais</div>
-                            <div class="dish__price">40€</div>
-                        </div>
-
-                    </div>
-
-                    <div class="menu__dish">
-                        <div class="dish__name">Magret de canard</div>
-
-                        <div class="dish__comment__price">
-                            <div class="dish__comment">Et parmentier de pommes de terres</div>
-                            <div class="dish__price">35€</div>
-                        </div>
-
-                    </div>
-
-                    <div class="menu__dish">
-                        <div class="dish__name">Pigeonneau d'Ille-et-Vilaine</div>
-
-                        <div class="dish__comment__price">
-                            <div class="dish__comment">Sur son lit de gnocchis aux légumes</div>
-                            <div class="dish__price">44€</div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="dish__type">
-                    <div class="menu__name">DESSERTS</div>
-
-                    <div class="menu__dish">
-                        <div class="dish__name">Pétales de violettes glacés</div>
-
-                        <div class="dish__comment__price">
-                            <div class="dish__comment">Et purée de noisettes</div>
-                            <div class="dish__price">18€</div>
-                        </div>
-
-                    </div>
-
-                    <div class="menu__dish">
-                        <div class="dish__name">Fondant au chocolat</div>
-
-                        <div class="dish__comment__price">
-                            <div class="dish__comment">Revisité</div>
-                            <div class="dish__price">22€</div>
-                        </div>
-
-                    </div>
-
-                    <div class="menu__dish">
-                        <div class="dish__name">Milefeuille croustillant</div>
-
-                        <div class="dish__comment__price">
-                            <div class="dish__comment">Myrtilles et pâte d'amende</div>
-                            <div class="dish__price">23€</div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="command__btn">
-                    <button>Commander</button>
-                </div>
-
             </div>
 
         </section>

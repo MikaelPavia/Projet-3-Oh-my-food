@@ -1,152 +1,3 @@
-@font-face {
-  font-family: "Shrikhand";
-  src: url("../../assets/polices/shrikhand/Shrikhand-Regular.eot");
-  src: url("../../assets/polices/shrikhand/Shrikhand-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/polices/shrikhand/Shrikhand-Regular.woff2") format("woff2"), url("../../assets/polices/shrikhando/Shrikhand-Regular.woff") format("woff"), url("../../assets/polices/shrikhand/Shrikhand-Regular.ttf") format("truetype"), url("../../assets/polices/shrikhand/Shrikhand-Regular.svg#Shrikhand-Regular") format("svg");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "robotoregular";
-  src: url("../../assets/polices/roboto/Roboto-Regular-webfont.eot");
-  src: url("../../assets/polices/roboto/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/polices/roboto/Roboto-Regular-webfont.woff2") format("woff2"), url("../../assets/polices/roboto/Roboto-Regular-webfont.woff") format("woff"), url("../../assets/polices/roboto/Roboto-Regular-webfont.ttf") format("truetype"), url("../../assets/polices/roboto/Roboto-Regular-webfont.svg#robotoregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-body {
-  font-family: "robotoregular";
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.header {
-  position: relative;
-  padding-left: 30px;
-}
-.header__logo {
-  width: 210px;
-  height: 39px;
-  padding-top: 15px;
-}
-.header__logo img {
-  width: 100%;
-  height: 100%;
-}
-.header i {
-  display: none;
-}
-.header li {
-  list-style-type: none;
-}
-
-@media all and (max-width: 768px) {
-  .header {
-    display: flex;
-    justify-content: center;
-    padding-left: unset;
-    height: 60px;
-  }
-  .header__logo {
-    width: 190px;
-    height: 35px;
-    padding-top: 15px;
-  }
-  .header i {
-    display: unset;
-    font-size: 1.5rem;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-  }
-}
-.place_banner {
-  display: flex;
-  align-items: center;
-  height: 50px;
-  margin-top: 1px;
-  margin-left: 30px;
-}
-.place_banner i {
-  font-size: 1.7rem;
-}
-.place_banner .place_banner__bloc {
-  margin-left: 15px;
-  display: flex;
-  justify-content: center;
-  width: 10%;
-}
-.place_banner .place_banner__bloc__text {
-  font-size: 1.3rem;
-}
-
-@media all and (max-width: 768px) {
-  .place_banner {
-    justify-content: center;
-    background-color: rgb(233, 233, 233);
-    margin-left: unset;
-  }
-  .place_banner i {
-    font-size: 1.1rem;
-  }
-  .place_banner .place_banner__bloc {
-    width: 40%;
-    margin-left: unset;
-  }
-  .place_banner .place_banner__bloc__text {
-    font-size: 1.2rem;
-  }
-}
-.reserve {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(250, 250, 250);
-  margin-top: 30px;
-  padding-left: 30px;
-}
-.reserve a {
-  display: flex;
-}
-.reserve__title {
-  width: 70%;
-  height: 60px;
-}
-.reserve__title--h1 {
-  font-size: 0.8rem;
-}
-.reserve__title--h2 {
-  font-size: 0.75rem;
-  width: 90%;
-  color: rgb(110, 106, 106);
-}
-.reserve__title__btn {
-  margin-bottom: 50px;
-  margin-top: 20px;
-}
-
-@media all and (max-width: 768px) {
-  .reserve {
-    background-color: rgb(248, 248, 248);
-    flex-direction: column;
-    align-items: center;
-    margin-top: unset;
-    margin-top: unset;
-    padding-left: unset;
-  }
-  .reserve a {
-    justify-content: center;
-    align-items: center;
-  }
-  .reserve__title {
-    text-align: center;
-    height: 80px;
-  }
-  .reserve__title__btn {
-    margin-top: 10px;
-  }
-}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -486,7 +337,141 @@ template {
   display: none;
 }
 
-button {
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../../assets/polices/shrikhand/Shrikhand-Regular.eot");
+  src: url("../../assets/polices/shrikhand/Shrikhand-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/polices/shrikhand/Shrikhand-Regular.woff2") format("woff2"), url("../../assets/polices/shrikhando/Shrikhand-Regular.woff") format("woff"), url("../../assets/polices/shrikhand/Shrikhand-Regular.ttf") format("truetype"), url("../../assets/polices/shrikhand/Shrikhand-Regular.svg#Shrikhand-Regular") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "robotoregular";
+  src: url("../../assets/polices/roboto/Roboto-Regular-webfont.eot");
+  src: url("../../assets/polices/roboto/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/polices/roboto/Roboto-Regular-webfont.woff2") format("woff2"), url("../../assets/polices/roboto/Roboto-Regular-webfont.woff") format("woff"), url("../../assets/polices/roboto/Roboto-Regular-webfont.ttf") format("truetype"), url("../../assets/polices/roboto/Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "robotoregular";
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-family: "Shrikhand";
+}
+
+@media all and (min-width: 992px) {
+  .header {
+    padding-left: 30px;
+  }
+  .header__logo {
+    width: 210px;
+    height: 39px;
+  }
+}
+.header {
+  box-shadow: 2px 2px 5px rgba(22, 22, 22, 0.3);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  padding-bottom: 20px;
+}
+.header__logo h1 {
+  font-size: 2.2rem;
+}
+.header i {
+  font-size: 1.5rem;
+}
+.header__bloc {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.header__bloc__element {
+  width: 95%;
+}
+
+@media all and (min-width: 992px) {
+  .place_banner {
+    margin-left: 30px;
+  }
+  .place_banner i {
+    font-size: 1.7rem;
+  }
+  .place_banner .place_banner__bloc {
+    width: 10%;
+    margin-left: 15px;
+  }
+  .place_banner .place_banner__bloc__text {
+    font-size: 1.3rem;
+  }
+}
+.place_banner {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-top: 1px;
+  justify-content: center;
+  background-color: rgb(233, 233, 233);
+}
+.place_banner i {
+  font-size: 1.1rem;
+}
+.place_banner .place_banner__bloc {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+}
+.place_banner .place_banner__bloc__text {
+  font-size: 1.3rem;
+  font-size: 1.2rem;
+}
+
+.reserve {
+  display: flex;
+  background-color: rgb(248, 248, 248);
+  flex-direction: column;
+  align-items: center;
+}
+.reserve a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reserve__title {
+  width: 70%;
+  height: 60px;
+  text-align: center;
+  height: 80px;
+}
+.reserve__title--h2 {
+  font-size: 1.1rem;
+}
+.reserve__title--h3 {
+  font-size: 1.05rem;
+  width: 90%;
+  color: rgb(110, 106, 106);
+}
+.reserve__title__btn {
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+@media all and (min-width: 992px) {
+  .reserve {
+    background-color: rgb(250, 250, 250);
+    align-items: unset;
+    margin-top: 30px;
+    padding-left: 30px;
+  }
+}
+.btn {
   height: 55px;
   width: 240px;
   background: linear-gradient(to top, #9356DC, #FF79DA);
@@ -494,6 +479,7 @@ button {
   border: 0;
   color: white;
   font-size: 1.1rem;
+  box-shadow: 2px 2px 5px rgba(22, 22, 22, 0.3);
 }
 
 .functioning {
@@ -509,18 +495,20 @@ button {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  height: 400px;
   width: 100%;
+  height: 280px;
+  align-items: center;
 }
 .functioning__steps__element {
   display: flex;
   align-items: center;
   height: 70px;
-  width: 25%;
   border-radius: 25px;
   position: relative;
   background-color: rgb(248, 248, 248);
   box-shadow: 2px 2px 5px rgba(22, 22, 22, 0.3);
+  width: 88%;
+  font-size: 1.15rem;
 }
 .functioning__steps__element:hover {
   background-color: #f2eafb;
@@ -529,20 +517,11 @@ button {
 .functioning__steps__element:hover i {
   color: #9356DC;
 }
-.functioning__steps__element--1 {
-  margin-left: 15%;
-}
-.functioning__steps__element--2 {
-  margin-left: 35%;
-}
-.functioning__steps__element--3 {
-  margin-left: 55%;
-}
 .functioning i {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: rgb(148, 148, 148);
 }
-.functioning p {
+.functioning span {
   border: 0;
   width: 29px;
   height: 29px;
@@ -566,43 +545,34 @@ button {
   left: 50px;
 }
 
-@media all and (max-width: 768px) {
-  .functioning__steps {
-    flex-direction: column;
-    height: 280px;
-    align-items: center;
-  }
-  .functioning__steps__element {
-    width: 88%;
-    font-size: 1.15rem;
-  }
-  .functioning__steps__element--1 {
-    margin-left: unset;
-  }
-  .functioning__steps__element--2 {
-    margin-left: unset;
-  }
-  .functioning__steps__element--3 {
-    margin-left: unset;
-  }
-  .functioning i {
-    font-size: 1.3rem;
-  }
-  .functioning__steps__element__content {
-    font-size: 1.2rem;
-    left: 50px;
-  }
-}
 .menu__icon {
   margin-left: -3px;
 }
 
+@media all and (min-width: 992px) {
+  .functioning__steps {
+    height: 400px;
+    align-items: unset;
+  }
+  .functioning__steps__element {
+    width: 25%;
+  }
+  .functioning__steps__element--1 {
+    margin-left: 15%;
+  }
+  .functioning__steps__element--2 {
+    margin-left: 35%;
+  }
+  .functioning__steps__element--3 {
+    margin-left: 55%;
+  }
+}
 .cards__section {
   background-color: rgb(248, 248, 248);
   height: auto;
   margin-top: 70px;
   padding-top: 40px;
-  padding-bottom: 200px;
+  padding-bottom: 80px;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -616,23 +586,24 @@ button {
   justify-content: space-between;
   height: auto;
   position: relative;
+  flex-direction: column;
 }
 
 a {
-  width: 20%;
+  width: 100%;
 }
 
-@media all and (max-width: 768px) {
+@media all and (min-width: 992px) {
   .cards__section {
-    padding-bottom: 80px;
+    padding-bottom: 200px;
   }
 
   .restaurants__list {
-    flex-direction: column;
+    flex-direction: unset;
   }
 
   a {
-    width: 100%;
+    width: 20%;
   }
 }
 .card {
@@ -689,7 +660,6 @@ a {
 }
 
 .menu__section__image {
-  background-color: red;
   height: 200px;
   width: 100%;
 }
@@ -699,24 +669,41 @@ a {
   object-fit: cover;
 }
 
+.section__menu {
+  background-color: rgb(240, 240, 240);
+  border-radius: 30px 30px 0 0;
+  height: 1300px;
+  padding-bottom: 100px;
+  margin-top: -10px;
+}
+
 .menu {
-  background-color: rgb(250, 250, 250);
-  background-color: red;
-  border-radius: 30px;
-  height: 950px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  height: 100%;
 }
-.menu__h2 {
-  background-color: blue;
+.menu__h1 {
+  font-size: 1.8rem;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+.menu__name {
+  padding-left: 20px;
+  font-size: 1.1rem;
 }
 .menu__dish {
-  background-color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   width: 90%;
   border-radius: 15px;
   height: 70px;
+  padding-left: 20px;
+  padding-top: 5px;
+  box-shadow: 2px 2px 5px rgba(22, 22, 22, 0.3);
+  background-color: white;
 }
 
 .dish__type {
@@ -724,7 +711,7 @@ a {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 85%;
+  height: 280px;
   justify-content: space-around;
 }
 
@@ -732,6 +719,30 @@ a {
   display: flex;
   width: 95%;
   justify-content: space-between;
+}
+
+.dish__name {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.dish__price {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.command__btn {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 130px;
+  justify-content: center;
+}
+
+.underline {
+  border: 2px solid #99E2D0;
+  width: 40px;
+  margin-top: 10px;
+  margin-bottom: -10px;
 }
 
 .footer {

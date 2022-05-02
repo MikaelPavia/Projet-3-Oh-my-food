@@ -4,7 +4,7 @@
     height: 260px;
     border-radius: 25px;
     margin-top: 20px;
-    box-shadow: 2px 2px 5px rgb(22, 22, 22, 0.3);
+    @include shadow;
     &__image {
         height: 70%;
         border-radius: 25px 25px 0 0;

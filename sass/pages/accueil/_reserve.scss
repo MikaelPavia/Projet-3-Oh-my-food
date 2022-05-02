@@ -1,24 +1,30 @@
 .reserve {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(250, 250, 250);
-    margin-top: 30px;
-    padding-left: 30px;
+        display: flex;
+         background-color: rgb(248, 248, 248);
+        flex-direction: column;
+        align-items: center;
+
 
     a {
         display: flex;
+        justify-content: center;
+        align-items: center
     }
 
     &__title {
         width: 70%;
         height: 60px;
 
-        &--h1 {
-            font-size: 0.8rem;
-        }
+
+        text-align: center;
+        height: 80px;
 
         &--h2 {
-            font-size: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        &--h3 {
+            font-size: 1.05rem;
             width: 90%;
             color: rgb(110, 106, 106);
         }
@@ -30,28 +36,19 @@
     }
 }
 
-
-
-@media all and (max-width: 768px) {
+@media all and (min-width: 992px) {
 
     .reserve {
-        background-color: rgb(248, 248, 248);
-        flex-direction: column;
-        align-items: center;
-        margin-top: unset;
-        margin-top: unset;
-        padding-left: unset;
-        a {
-            justify-content: center;
-            align-items: center;
-        }
-
+        background-color: rgb(250, 250, 250);
+        align-items: unset;
+        margin-top: 30px;
+        padding-left: 30px;
+        
         &__title {
-            text-align: center;
-            height: 80px;
+            
 
             &__btn {
-                margin-top: 10px;
+                
             }
         }
     }
