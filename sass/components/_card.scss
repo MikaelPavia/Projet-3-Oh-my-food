@@ -5,6 +5,7 @@
     border-radius: 25px;
     margin-top: 20px;
     @include shadow;
+    max-width: 650px;
     &__image {
         height: 70%;
         border-radius: 25px 25px 0 0;

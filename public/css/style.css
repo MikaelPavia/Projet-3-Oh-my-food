@@ -372,6 +372,7 @@ h1 {
   border-radius: 25px;
   margin-top: 20px;
   box-shadow: 2px 2px 5px rgba(22, 22, 22, 0.3);
+  max-width: 650px;
 }
 .card__image {
   height: 70%;
@@ -432,6 +433,7 @@ h1 {
   color: white;
   font-size: 1.1rem;
   box-shadow: 2px 2px 5px rgba(22, 22, 22, 0.3);
+  cursor: pointer;
 }
 
 .header {
@@ -753,7 +755,7 @@ a {
   width: 100%;
 }
 .menu__section__image img {
-  height: 100%;
+  height: 120%;
   width: 100%;
   object-fit: cover;
 }
@@ -784,6 +786,7 @@ a {
   padding-top: 40px;
   padding-left: 20px;
   padding-bottom: 20px;
+  font-weight: normal;
 }
 .menu__name {
   padding-left: 20px;
