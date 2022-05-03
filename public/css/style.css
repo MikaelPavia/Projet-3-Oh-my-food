@@ -454,7 +454,7 @@ h1 {
   align-items: baseline;
 }
 .header__bloc__element {
-  width: 90%;
+  width: 97%;
 }
 
 .icon_bloc {
@@ -675,7 +675,7 @@ h1 {
   font-size: 1.2rem;
   font-weight: bold;
   position: absolute;
-  left: 50px;
+  left: 25px;
 }
 
 .menu__icon {
@@ -764,6 +764,13 @@ a {
   height: 1300px;
   padding-bottom: 100px;
   margin-top: -10px;
+  position: relative;
+}
+.section__menu i {
+  font-size: 2rem;
+  position: absolute;
+  right: 30px;
+  top: 35px;
 }
 
 .menu {
@@ -790,9 +797,13 @@ a {
   border-radius: 15px;
   height: 70px;
   padding-left: 20px;
-  padding-top: 5px;
   box-shadow: 2px 2px 5px rgba(22, 22, 22, 0.3);
   background-color: white;
+  margin: 10px 10px 10px 10px;
+}
+
+.bloc_menu_dish {
+  width: 100%;
 }
 
 .dish__type {
@@ -800,7 +811,6 @@ a {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 280px;
   justify-content: space-around;
 }
 
@@ -840,17 +850,39 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: unset;
+    margin-top: unset;
+  }
+  .section__menu i {
+    right: 80px;
+    top: 20px;
   }
 
   .menu {
     align-items: center;
     width: 50%;
   }
+  .menu__h1 {
+    padding-top: unset;
+  }
+  .menu__name {
+    padding-left: unset;
+    margin-bottom: 10px;
+    margin-top: 7px;
+  }
 
   .dish__type {
     width: 50%;
-    height: 260px;
     min-width: 400px;
+  }
+
+  .underline {
+    margin-top: 5px;
+    margin-bottom: unset;
+  }
+
+  .menu__section__image img {
+    border-radius: 30px 30px 0 0;
   }
 }
 

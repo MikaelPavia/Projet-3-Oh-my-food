@@ -15,6 +15,13 @@
     height: 1300px;
     padding-bottom: 100px;
     margin-top: -10px;
+    position: relative;
+    & i {
+        font-size: 2rem;
+        position: absolute;
+        right: 30px;
+        top: 35px;
+    }
 }
 
 .menu {
@@ -43,10 +50,14 @@
         border-radius: 15px;
         height: 70px;
         padding-left: 20px;
-        padding-top: 5px;
         @include shadow;
         background-color: white;
+        margin: 10px 10px 10px 10px;
     }
+}
+
+.bloc_menu_dish {
+    width: 100%;
 }
 
 .dish__type {
@@ -54,7 +65,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 280px;
     justify-content: space-around;
 }
 
@@ -94,16 +104,42 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: unset;
+        margin-top: unset;
+        & i {
+            right: 80px;
+            top: 20px;
+        }
     }
 
     .menu {
         align-items: center;
         width: 50%;
+
+        &__h1 {
+            padding-top: unset;
+        }
+
+        &__name {
+            padding-left: unset;
+            margin-bottom: 10px;
+            margin-top: 7px;
+        }
     }
 
     .dish__type {
         width: 50%;
-        height: 260px;
         min-width: 400px;
+    }
+
+    .underline {
+        margin-top: 5px;
+        margin-bottom: unset;
+    }
+
+    .menu__section__image {
+        & img {
+            border-radius: 30px 30px 0 0;
+        }
     }
 }
