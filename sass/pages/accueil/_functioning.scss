@@ -76,6 +76,7 @@
     margin-left: -3px;
 }
 
+// Desktop
 @media all and (min-width: 992px) {
     .functioning {
         &__h2 {
@@ -88,6 +89,7 @@
             &__element {
                 width: 25%;
                 min-width: 315px;
+                max-width: 455px;
 
                 &--1 {
                     margin-left: 20%;
@@ -103,5 +105,17 @@
             }
         }
 
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 992px) {
+    .functioning {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &__steps {
+            width: 65%;
+        }
     }
 }
