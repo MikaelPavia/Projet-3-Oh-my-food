@@ -26,12 +26,17 @@ a {
 @media all and (min-width: 992px) {
     .cards__section {
         padding-bottom: 200px;
+        &__h2 {
+            font-size: 1.8rem;
+        }
     }
     .restaurants__list {
         flex-direction: unset;
+        flex-wrap: wrap;
     }
         
     a {
         width: 20%;
+        min-width: 280px;
     }
 }

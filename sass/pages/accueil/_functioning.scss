@@ -78,24 +78,27 @@
 
 @media all and (min-width: 992px) {
     .functioning {
-
+        &__h2 {
+            font-size: 1.8rem;
+        }
         &__steps {
             height: 400px;
             align-items: unset;
 
             &__element {
                 width: 25%;
+                min-width: 315px;
 
                 &--1 {
-                    margin-left: 15%;
+                    margin-left: 20%;
                 }
 
                 &--2 {
-                    margin-left: 35%;
+                    margin-left: 40%;
                 }
 
                 &--3 {
-                    margin-left: 55%;
+                    margin-left: 60%;
                 }
             }
         }

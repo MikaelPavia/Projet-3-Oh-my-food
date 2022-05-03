@@ -87,3 +87,23 @@
     margin-top: 10px;
     margin-bottom: -10px;
 }
+
+@media all and (min-width: 992px) {
+    .section__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu {
+        align-items: center;
+        width: 50%;
+    }
+
+    .dish__type {
+        width: 50%;
+        height: 260px;
+        min-width: 400px;
+    }
+}

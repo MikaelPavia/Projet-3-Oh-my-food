@@ -1,16 +1,5 @@
-@media all and (min-width: 992px) {
-    .header {
-        padding-left: 30px;
-        &__logo {
-            width: 210px;
-            height: 39px;
-        }
-    }
-}
-
 .header {
     @include shadow;
-    z-index: 1;
     @include layout-header;
     height: 60px;
     padding-bottom: 20px;
@@ -39,4 +28,13 @@
 
 .icon_bloc {
     width: 100%;
+}
+
+@media all and (min-width: 992px) {
+    .header {
+        &__logo {
+            width: 210px;
+            height: 39px;
+        }
+    }
 }

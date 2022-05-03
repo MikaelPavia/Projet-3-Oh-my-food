@@ -50,3 +50,9 @@
     border-radius: 3px;
     font-weight: bold;
 }
+
+@media all and (min-width: 992px) {
+    .card {
+        min-width: 280px;
+    }
+}
