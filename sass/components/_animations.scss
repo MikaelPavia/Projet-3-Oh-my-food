@@ -1,0 +1,52 @@
+.check {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin: auto;
+    top: 700px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    -webkit-animation: spin 1.5s linear infinite;
+    -o-animation: spin 1.5s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+.fa-check {
+    z-index: 2;
+    color: red;
+    font-size: 3rem;
+}
+
+
+
+.bloc-check {
+    width: 90px;
+    height: 100%;
+    background-color: #15DEA5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+    & .icon_check {
+        position: unset;
+        font-size: 2.5rem;
+        color: #FFF;
+
+    }
+    
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

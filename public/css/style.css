@@ -403,8 +403,10 @@ h1 {
   font-size: 1.6rem;
   position: absolute;
   right: 20px;
+  transform: scaleY(1);
 }
 
+@keyframes remplissage {}
 .new {
   position: absolute;
   top: 15px;
@@ -439,6 +441,52 @@ h1 {
   background: linear-gradient(to top, #9356DC, #FF79DA);
 }
 
+.check {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin: auto;
+  top: 700px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-animation: spin 1.5s linear infinite;
+  -o-animation: spin 1.5s linear infinite;
+  animation: spin 3s linear infinite;
+}
+
+.fa-check {
+  z-index: 2;
+  color: red;
+  font-size: 3rem;
+}
+
+.bloc-check {
+  width: 90px;
+  height: 100%;
+  background-color: #15DEA5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  transform: translateX(100%);
+}
+.bloc-check .icon_check {
+  position: unset;
+  font-size: 2.5rem;
+  color: #FFF;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .header {
   box-shadow: 2px 2px 5px rgba(22, 22, 22, 0.3);
   display: flex;
@@ -860,6 +908,27 @@ a {
   box-shadow: 2px 2px 5px rgba(22, 22, 22, 0.3);
   background-color: white;
   margin: 10px 10px 10px 10px;
+  overflow: hidden;
+  position: relative;
+}
+.menu__dish:active .bloc-check {
+  transform: translateX(0);
+  transition: transform 600ms ease-in-out;
+}
+.menu__dish:active .bloc-check .icon_check {
+  -webkit-animation: spin 1.5s linear infinite;
+  -o-animation: spin 1.5s linear infinite;
+  animation: spin 0.7s linear 1;
+  font-size: 2rem;
+  color: #FFF;
+  position: unset;
+}
+.menu__dish:active .dish__comment__price {
+  transform: translateX(-5%);
+  transition: 0.6s ease-in-out;
+  width: 73%;
+  margin-left: 4%;
+  margin-right: 80%;
 }
 
 .bloc_menu_dish {
@@ -932,10 +1001,13 @@ a {
     margin-bottom: 10px;
     margin-top: 20px;
   }
+  .menu__dish:active .dish__comment__price {
+    width: 78%;
+  }
 
   .dish__type {
-    width: 50%;
-    min-width: 400px;
+    width: 60%;
+    min-width: 500px;
   }
 
   .underline {
