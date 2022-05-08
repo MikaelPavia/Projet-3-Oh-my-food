@@ -57,31 +57,7 @@
         margin: 10px 10px 10px 10px;
         overflow: hidden;
         position: relative;
-
-        &:active {
-            & .bloc-check {
-                transform: translateX(0);
-                transition: transform 600ms ease-in-out;
-
-                & .icon_check {
-                    -webkit-animation: spin 1.5s linear infinite;
-                    -o-animation: spin 1.5s linear infinite;
-                    animation: spin 0.7s linear 1;
-                    font-size: 2rem;
-                    color: #FFF;
-                    position: unset;
-
-                }
-            }
-
-            & .dish__comment__price {
-                transform: translateX(-5%);
-                transition: 0.6s ease-in-out;
-                width: 73%;
-                margin-left: 4%;
-                margin-right: 80%;
-            }
-        }
+        cursor: pointer;
     }
 }
 
@@ -103,6 +79,9 @@
     justify-content: space-between;
 }
 
+// .dish__comment {
+//     overflow: ;
+// }
 .dish__name {
     font-weight: bold;
     font-size: 1.2rem;
