@@ -30,11 +30,15 @@
     position: absolute;
     right: 0;
     transform: translateX(100%);
+    transition: transform 0.8s ease-out;
 
     & .icon_check {
         position: unset;
-        font-size: 2.5rem;
+        font-size: 2rem;
         color: #FFF;
+        // animation: spin 0.7s linear 1;
+        transform: rotate(0deg);
+        transition: 0.7s linear;
 
     }
     
@@ -42,13 +46,19 @@
 
 
 .menu {
+    .dish__comment__price {
+        transition: 0.7s ease-out;
+    }
+    
     &__dish { 
-        &:active {
+        
+        &:hover {
             & .bloc-check {
-                animation: checkbox 0.6s both ease-in-out;
-
+                transform: translateX(0);
                 & .icon_check {
-                    animation: spin 0.7s linear 1;
+                    // animation: spin 0.7s linear 1;
+                    transform: rotate(360deg);
+                    transition: 0.7s linear;
                     font-size: 2rem;
                     color: #FFF;
                     position: unset;
@@ -57,33 +67,55 @@
             }
 
             & .dish__comment__price {
-                transform: translateX(-5%);
-                transition: 0.6s ease-in-out;
-                width: 73%;
-                margin-left: 4%;
-                margin-right: 80%;
+                width: 78%;
             }
         }
     }
 }
 
-@keyframes checkbox {
-    0% {
-        transform: translateX(100);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
 
 
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
+
+// @keyframes spin {
+//     0% {
+//         transform: rotate(0deg);
+//     }
+
+//     100% {
+//         transform: rotate(360deg);
+//     }
+// }
+
+
+.card {
+    &__content {
+        & .heart__icon {
+            font-size: 1.6rem;
+            position: absolute;
+            right: 20px;
+            & .heart__icon_2 {
+                font-size: 1.6rem;
+                position: absolute;
+                right: 0px;
+                transform: scaleY(0);
+                transition: transform 0.5s ease-out;
+                color: $color-primary;
+            
+        }
+        &:hover { 
+                color: $color-primary;
+            
+            & .heart__icon_2 {
+            transform: scaleY(1);
+            transition: 0.5s linear;
+            color: $color-primary;
+            }
+        }
+        
+            
+        }
+        
     }
 
-    100% {
-        transform: rotate(360deg);
-    }
 }

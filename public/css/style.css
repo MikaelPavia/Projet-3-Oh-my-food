@@ -429,7 +429,7 @@ h1 {
 .btn {
   height: 55px;
   width: 260px;
-  background: #9356DC;
+  background: linear-gradient(to top, #9356DC, #FF79DA);
   border-radius: 40px;
   border: 0;
   color: white;
@@ -438,7 +438,8 @@ h1 {
   cursor: pointer;
 }
 .btn:hover {
-  background: linear-gradient(to top, #9356DC, #FF79DA);
+  background: #FF76D9;
+  box-shadow: 5px 5px 5px rgba(22, 22, 22, 0.3);
 }
 
 .check {
@@ -470,46 +471,55 @@ h1 {
   position: absolute;
   right: 0;
   transform: translateX(100%);
+  transition: transform 0.8s ease-out;
 }
 .bloc-check .icon_check {
   position: unset;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #FFF;
+  transform: rotate(0deg);
+  transition: 0.7s linear;
 }
 
-.menu__dish:active .bloc-check {
-  animation: checkbox 0.6s both ease-in-out;
+.menu .dish__comment__price {
+  transition: 0.7s ease-out;
 }
-.menu__dish:active .bloc-check .icon_check {
-  animation: spin 0.7s linear 1;
+.menu__dish:hover .bloc-check {
+  transform: translateX(0);
+}
+.menu__dish:hover .bloc-check .icon_check {
+  transform: rotate(360deg);
+  transition: 0.7s linear;
   font-size: 2rem;
   color: #FFF;
   position: unset;
 }
-.menu__dish:active .dish__comment__price {
-  transform: translateX(-5%);
-  transition: 0.6s ease-in-out;
-  width: 73%;
-  margin-left: 4%;
-  margin-right: 80%;
+.menu__dish:hover .dish__comment__price {
+  width: 78%;
 }
 
-@keyframes checkbox {
-  0% {
-    transform: translateX(100);
-  }
-  100% {
-    transform: translateX(0);
-  }
+.card__content .heart__icon {
+  font-size: 1.6rem;
+  position: absolute;
+  right: 20px;
 }
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.card__content .heart__icon .heart__icon_2 {
+  font-size: 1.6rem;
+  position: absolute;
+  right: 0px;
+  transform: scaleY(0);
+  transition: transform 0.5s ease-out;
+  color: #9356DC;
 }
+.card__content .heart__icon:hover {
+  color: #9356DC;
+}
+.card__content .heart__icon:hover .heart__icon_2 {
+  transform: scaleY(1);
+  transition: 0.5s linear;
+  color: #9356DC;
+}
+
 .header {
   box-shadow: 2px 2px 5px rgba(22, 22, 22, 0.3);
   display: flex;

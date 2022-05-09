@@ -6,3 +6,7 @@
  @mixin shadow {
     box-shadow: 2px 2px 5px rgb(22, 22, 22, 0.3);
  }
+
+ @mixin shadow-hover {
+     box-shadow: 5px 5px 5px rgb(22, 22, 22, 0.3);
+ }

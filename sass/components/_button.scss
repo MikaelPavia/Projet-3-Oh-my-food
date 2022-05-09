@@ -1,7 +1,7 @@
 .btn {
     height: 55px;
     width: 260px;
-    background: $color-primary;
+    background: $color-button;
     border-radius: 40px;
     border: 0;
     color: white;
@@ -9,6 +9,7 @@
     @include shadow;
     cursor: pointer;
     &:hover {
-        background: linear-gradient(to top, $color-primary, $color-secondary);
+        background: #FF76D9;
+        @include shadow-hover;
     }
 }
