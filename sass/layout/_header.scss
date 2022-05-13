@@ -3,7 +3,7 @@
     @include layout-header;
     height: 60px;
     padding-bottom: 20px;
-    
+
     &__logo h1 {
         font-size: 2.2rem;
     }
@@ -17,13 +17,14 @@
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+
         &__element {
             width: 97%;
         }
-        
+
     }
 
-    
+
 }
 
 .icon_bloc {

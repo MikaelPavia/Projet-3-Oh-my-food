@@ -136,9 +136,10 @@
             margin-bottom: 10px;
             margin-top: 20px;
         }
+
         &__dish {
             &:active {
-    
+
                 & .dish__comment__price {
                     width: 78%;
                 }

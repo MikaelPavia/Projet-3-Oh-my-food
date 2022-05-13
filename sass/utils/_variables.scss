@@ -1,4 +1,18 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$color-button: linear-gradient(to top, $color-primary, $color-secondary)
+
+
+$color-button: linear-gradient(to top, $color-primary, $color-secondary);
+
+
+
+$color-bars: #15DEA5;
+$color-bars-inv: #0E397F;
+$num-bars: 4;
+$width-bar: 30px;
+$anim-delay-test: 1000ms / $num-bars;
+
+
+$dish__delay: 130ms;
+$dish__number: 10;

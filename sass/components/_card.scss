@@ -6,17 +6,20 @@
     margin-top: 20px;
     @include shadow;
     max-width: 650px;
+
     &__image {
         height: 70%;
         border-radius: 25px 25px 0 0;
         position: relative;
+
         & img {
             height: 100%;
             width: 100%;
             object-fit: cover;
-            border-radius: 25px 25px 0  0;
+            border-radius: 25px 25px 0 0;
         }
     }
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -26,10 +29,12 @@
         height: 30%;
         font-size: 1.1rem;
         position: relative;
+
         & h4 {
             margin: 0 0 10px 0;
             font-size: 1.2rem;
         }
+
         & .heart__icon {
             font-size: 1.6rem;
             position: absolute;
@@ -42,13 +47,9 @@
 }
 
 @keyframes remplissage {
-    0% {
+    0% {}
 
-    }
-
-    100% {
-
-    }
+    100% {}
 }
 
 .new {

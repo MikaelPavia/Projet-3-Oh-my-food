@@ -1,3 +1,84 @@
+// Animation loader
+.loader__page {
+    position: fixed;
+    left: 0px;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #FFF;
+    filter: blur(100);
+    z-index: -1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: container_loader 3.5s;
+    // transform: scaleY(0);
+    opacity: 0;
+}
+
+.loader {
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 0;
+
+
+    &__bar {
+        background-color: $color-bars;
+        height: 10px;
+        border-radius: 15px;
+
+
+        @for $i from 1 through $num-bars {
+            &--#{$i} {
+
+                width: $width-bar * $i;
+
+                @keyframes bars__test#{$i} {
+                    0% {
+                        transform: perspective(0px) scaleZ($i / 10) translateZ(0rem);
+
+                    }
+
+                    100% {
+                        transform: scaleZ(1 - $i / 10) translateZ(.1rem);
+
+                    }
+
+                }
+
+                animation: bars__test#{$i} 1.6s 2 ease;
+                animation-delay: $anim-delay-test * $i;
+
+                &.inv {
+                    background-color: $color-bars-inv;
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes container_loader {
+    0% {
+        // transform: scaleY(1);
+        opacity: 1;
+        z-index: 1000;
+    }
+
+    75% {
+        // transform: scaleY(1);
+        opacity: 1;
+        z-index: 1000;
+    }
+}
+
+
+// Animation check menu
+
+
 .check {
     border-radius: 50%;
     width: 50px;
@@ -41,7 +122,7 @@
         transition: 0.7s linear;
 
     }
-    
+
 }
 
 
@@ -49,12 +130,13 @@
     .dish__comment__price {
         transition: 0.7s ease-out;
     }
-    
-    &__dish { 
-        
+
+    &__dish {
+
         &:hover {
             & .bloc-check {
                 transform: translateX(0);
+
                 & .icon_check {
                     // animation: spin 0.7s linear 1;
                     transform: rotate(360deg);
@@ -74,19 +156,7 @@
 }
 
 
-
-
-
-// @keyframes spin {
-//     0% {
-//         transform: rotate(0deg);
-//     }
-
-//     100% {
-//         transform: rotate(360deg);
-//     }
-// }
-
+// Animation heart on the cards
 
 .card {
     &__content {
@@ -94,6 +164,7 @@
             font-size: 1.6rem;
             position: absolute;
             right: 20px;
+
             & .heart__icon_2 {
                 font-size: 1.6rem;
                 position: absolute;
@@ -101,21 +172,64 @@
                 transform: scaleY(0);
                 transition: transform 0.5s ease-out;
                 color: $color-primary;
-            
-        }
-        &:hover { 
+
+            }
+
+            &:hover {
                 color: $color-primary;
-            
-            & .heart__icon_2 {
-            transform: scaleY(1);
-            transition: 0.5s linear;
-            color: $color-primary;
+
+                & .heart__icon_2 {
+                    transform: scaleY(1);
+                    transition: 0.5s linear;
+                    color: $color-primary;
+                }
             }
         }
-        
-            
-        }
-        
     }
 
+}
+
+
+// Animation appearance menus
+
+
+.menu {
+    &__name {
+        animation: animation__name 1s ease-in;
+    }
+
+    &__dish {
+        animation: move__dish 0.8s both ease-in alternate;
+
+        @for $i from 1 through $dish__number {
+
+            &--#{$i} {
+                animation-delay: $dish__delay * $i;
+
+            }
+
+        }
+    }
+}
+
+@keyframes move__dish {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes animation__name {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
