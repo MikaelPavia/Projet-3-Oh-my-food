@@ -85,24 +85,33 @@
     justify-content: space-around;
 }
 
-.dish__comment__price {
-    display: flex;
-    width: 95%;
-    justify-content: space-between;
+.dish__comment {
+    overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
+    font-size: 1.1rem;
 }
-
 
 .dish__name {
     font-weight: bold;
     font-size: 1.2rem;
+    width: 95%;
+    overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
+    transition: 0.7s ease-out;
+}
+
+.dish__comment__price {
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
 }
 
 .dish__price {
     font-size: 1.1rem;
     font-weight: bold;
-    text-overflow: ellipsis;
+    margin-left: 5px;
 }
 
 .command__btn {
@@ -134,8 +143,8 @@
             right: 80px;
             top: 50px;
         }
-    
-        
+
+
     }
 
     .menu {
