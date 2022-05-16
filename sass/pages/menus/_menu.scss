@@ -17,11 +17,22 @@
     margin-top: -10px;
     position: relative;
 
-    & i {
-        font-size: 2rem;
+    & .heart__icon {
         position: absolute;
         right: 30px;
         top: 35px;
+        font-size: 2rem;
+    }
+
+    & .heart__icon_anime {
+        font-size: 1.95rem;
+        position: absolute;
+        right: 0px;
+        transform: scale(0);
+        transition: transform 0.5s ease-out;
+        transform-origin: bottom;
+        color: $color-primary;
+
     }
 }
 
@@ -31,12 +42,13 @@
     justify-content: space-between;
     height: 100%;
 
-    &__h1 {
+    &__h2 {
         font-size: 1.65rem;
         padding-top: 40px;
         padding-left: 20px;
         padding-bottom: 20px;
         font-weight: normal;
+        font-family: 'Shrikhand';
     }
 
     &__name {
@@ -77,17 +89,20 @@
     display: flex;
     width: 95%;
     justify-content: space-between;
+    text-overflow: ellipsis;
 }
 
 
 .dish__name {
     font-weight: bold;
     font-size: 1.2rem;
+    text-overflow: ellipsis;
 }
 
 .dish__price {
     font-size: 1.1rem;
     font-weight: bold;
+    text-overflow: ellipsis;
 }
 
 .command__btn {
@@ -115,10 +130,12 @@
         height: unset;
         margin-top: unset;
 
-        & i {
+        & .heart__icon {
             right: 80px;
-            top: 20px;
+            top: 50px;
         }
+    
+        
     }
 
     .menu {

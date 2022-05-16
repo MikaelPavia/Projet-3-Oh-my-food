@@ -1,36 +1,12 @@
 // Animation loader
 .loader__page {
-    position: fixed;
-    left: 0px;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #FFF;
-    filter: blur(100);
-    z-index: -1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     animation: container_loader 3.5s;
-    // transform: scaleY(0);
-    opacity: 0;
+    transform: scaleY(0);
+    // opacity: 0;
 }
 
 .loader {
-    height: 110px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    z-index: 0;
-
-
     &__bar {
-        background-color: $color-bars;
-        height: 10px;
-        border-radius: 15px;
-
-
         @for $i from 1 through $num-bars {
             &--#{$i} {
 
@@ -63,124 +39,30 @@
 
 @keyframes container_loader {
     0% {
-        // transform: scaleY(1);
-        opacity: 1;
+        transform: scaleY(1);
+        // opacity: 1;
         z-index: 1000;
     }
 
-    75% {
-        // transform: scaleY(1);
-        opacity: 1;
+    80% {
+        transform: scaleY(1);
+        // opacity: 1;
         z-index: 1000;
     }
 }
-
-
-// Animation check menu
-
-
-.check {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    margin: auto;
-    top: 700px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-
-    animation: spin 3s linear infinite;
-}
-
-.fa-check {
-    z-index: 2;
-    color: red;
-    font-size: 3rem;
-}
-
-
-
-.bloc-check {
-    width: 90px;
-    height: 100%;
-    background-color: #15DEA5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 0;
-    transform: translateX(100%);
-    transition: transform 0.8s ease-out;
-
-    & .icon_check {
-        position: unset;
-        font-size: 2rem;
-        color: #FFF;
-        // animation: spin 0.7s linear 1;
-        transform: rotate(0deg);
-        transition: 0.7s linear;
-
-    }
-
-}
-
-
-.menu {
-    .dish__comment__price {
-        transition: 0.7s ease-out;
-    }
-
-    &__dish {
-
-        &:hover {
-            & .bloc-check {
-                transform: translateX(0);
-
-                & .icon_check {
-                    // animation: spin 0.7s linear 1;
-                    transform: rotate(360deg);
-                    transition: 0.7s linear;
-                    font-size: 2rem;
-                    color: #FFF;
-                    position: unset;
-
-                }
-            }
-
-            & .dish__comment__price {
-                width: 78%;
-            }
-        }
-    }
-}
-
 
 // Animation heart on the cards
 
 .card {
     &__content {
         & .heart__icon {
-            font-size: 1.6rem;
-            position: absolute;
-            right: 20px;
-
-            & .heart__icon_2 {
-                font-size: 1.6rem;
-                position: absolute;
-                right: 0px;
-                transform: scaleY(0);
-                transition: transform 0.5s ease-out;
-                color: $color-primary;
-
-            }
-
             &:hover {
                 color: $color-primary;
 
-                & .heart__icon_2 {
-                    transform: scaleY(1);
-                    transition: 0.5s linear;
+                & .heart__icon_anime {
+                    transform: scale(1);
+                    transform-origin: bottom;
+                    transition: 0.4s linear;
                     color: $color-primary;
                 }
             }
@@ -231,5 +113,98 @@
 
     100% {
         opacity: 1;
+    }
+}
+
+// Animation check menu
+
+
+.check {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin: auto;
+    top: 700px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    animation: spin 3s linear infinite;
+}
+
+.fa-check {
+    z-index: 2;
+    color: red;
+    font-size: 3rem;
+}
+
+.bloc-check {
+    width: 90px;
+    height: 100%;
+    background-color: #15DEA5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.8s ease-out;
+
+    & .icon_check {
+        position: unset;
+        font-size: 2rem;
+        color: #FFF;
+        // animation: spin 0.7s linear 1;
+        transform: rotate(0deg);
+        transition: 0.7s linear;
+
+    }
+
+}
+
+.menu {
+    .dish__comment__price {
+        transition: 0.7s ease-out;
+    }
+
+    &__dish {
+
+        &:hover {
+            & .bloc-check {
+                transform: translateX(0);
+
+                & .icon_check {
+                    // animation: spin 0.7s linear 1;
+                    transform: rotate(360deg);
+                    transition: 0.7s linear;
+                    font-size: 2rem;
+                    color: #FFF;
+                    position: unset;
+
+                }
+            }
+
+            & .dish__comment__price {
+                width: 75%;
+            }
+        }
+    }
+}
+
+// Animation heart menus top
+
+.section__menu {
+    & .heart__icon {
+        &:hover {
+            color: $color-primary;
+
+            & .heart__icon_anime {
+                transform: scale(1);
+                transform-origin: bottom;
+                transition: 0.4s linear;
+                color: $color-primary;
+            }
+        }
     }
 }

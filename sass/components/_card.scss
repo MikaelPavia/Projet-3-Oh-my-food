@@ -39,9 +39,17 @@
             font-size: 1.6rem;
             position: absolute;
             right: 20px;
-            transform: scaleY(1);
         }
+        & .heart__icon_anime {
+            font-size: 1.55rem;
+            position: absolute;
+            right: 0px;
+            transform: scale(0);
+            transition: transform 0.5s ease-out;
+            transform-origin: bottom;
+            color: $color-primary;
 
+        }
 
     }
 }
