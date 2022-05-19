@@ -1,3 +1,127 @@
+.menu__name {
+  animation: animation__name 1s ease-in;
+}
+.menu__dish {
+  animation: move__dish 0.8s both ease-in alternate;
+}
+.menu__dish--1 {
+  animation-delay: 130ms;
+}
+.menu__dish--2 {
+  animation-delay: 260ms;
+}
+.menu__dish--3 {
+  animation-delay: 390ms;
+}
+.menu__dish--4 {
+  animation-delay: 520ms;
+}
+.menu__dish--5 {
+  animation-delay: 650ms;
+}
+.menu__dish--6 {
+  animation-delay: 780ms;
+}
+.menu__dish--7 {
+  animation-delay: 910ms;
+}
+.menu__dish--8 {
+  animation-delay: 1040ms;
+}
+.menu__dish--9 {
+  animation-delay: 1170ms;
+}
+.menu__dish--10 {
+  animation-delay: 1300ms;
+}
+
+@keyframes move__dish {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animation__name {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.check {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin: auto;
+  top: 700px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  animation: spin 3s linear infinite;
+}
+
+.fa-check {
+  z-index: 2;
+  color: red;
+  font-size: 3rem;
+}
+
+.bloc-check {
+  width: 90px;
+  height: 100%;
+  background-color: #15DEA5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  transform: translateX(100%);
+  transition: transform 0.8s ease-out;
+}
+.bloc-check .icon_check {
+  position: unset;
+  font-size: 2rem;
+  color: #FFF;
+  transform: rotate(0deg);
+  transition: 0.7s linear;
+}
+
+.menu .dish__comment__price {
+  transition: 0.7s ease-out;
+}
+.menu__dish:hover .bloc-check {
+  transform: translateX(0);
+}
+.menu__dish:hover .bloc-check .icon_check {
+  transform: rotate(360deg);
+  transition: 0.7s linear;
+  font-size: 2rem;
+  color: #FFF;
+  position: unset;
+}
+.menu__dish:hover .dish__name {
+  width: 75%;
+}
+.menu__dish:hover .dish__comment__price {
+  width: 78%;
+}
+
+.heart__icon:hover {
+  color: #9356DC;
+}
+.heart__icon:hover .heart__icon_anime {
+  transform: scale(1);
+  transform-origin: bottom;
+  transition: 0.4s linear;
+  color: #9356DC;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -401,20 +525,12 @@ h1 {
 }
 .card__content .heart__icon {
   font-size: 1.6rem;
-  position: absolute;
   right: 20px;
 }
 .card__content .heart__icon_anime {
   font-size: 1.55rem;
-  position: absolute;
-  right: 0px;
-  transform: scale(0);
-  transition: transform 0.5s ease-out;
-  transform-origin: bottom;
-  color: #9356DC;
 }
 
-@keyframes remplissage {}
 .new {
   position: absolute;
   top: 15px;
@@ -444,10 +560,39 @@ h1 {
   font-size: 1.3rem;
   box-shadow: 2px 2px 5px rgba(22, 22, 22, 0.3);
   cursor: pointer;
+  transition: all 200ms;
 }
 .btn:hover {
-  background: #FF76D9;
+  background: linear-gradient(to top, #a16be0, #ff93e1);
   box-shadow: 5px 5px 5px rgba(22, 22, 22, 0.3);
+  transform: translateY(-5%);
+}
+
+.loader__page {
+  position: fixed;
+  left: 0px;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #FFF;
+  z-index: -1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 0;
+}
+.loader__bar {
+  background-color: #15DEA5;
+  height: 10px;
+  border-radius: 15px;
 }
 
 .loader__page {
@@ -530,167 +675,6 @@ h1 {
     z-index: 1000;
   }
 }
-.card__content .heart__icon:hover {
-  color: #9356DC;
-}
-.card__content .heart__icon:hover .heart__icon_anime {
-  transform: scale(1);
-  transform-origin: bottom;
-  transition: 0.4s linear;
-  color: #9356DC;
-}
-
-.menu__name {
-  animation: animation__name 1s ease-in;
-}
-.menu__dish {
-  animation: move__dish 0.8s both ease-in alternate;
-}
-.menu__dish--1 {
-  animation-delay: 130ms;
-}
-.menu__dish--2 {
-  animation-delay: 260ms;
-}
-.menu__dish--3 {
-  animation-delay: 390ms;
-}
-.menu__dish--4 {
-  animation-delay: 520ms;
-}
-.menu__dish--5 {
-  animation-delay: 650ms;
-}
-.menu__dish--6 {
-  animation-delay: 780ms;
-}
-.menu__dish--7 {
-  animation-delay: 910ms;
-}
-.menu__dish--8 {
-  animation-delay: 1040ms;
-}
-.menu__dish--9 {
-  animation-delay: 1170ms;
-}
-.menu__dish--10 {
-  animation-delay: 1300ms;
-}
-
-@keyframes move__dish {
-  0% {
-    opacity: 0;
-    transform: translateY(50%);
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes animation__name {
-  0% {
-    opacity: 0;
-    transform: translateY(50%);
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.check {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  margin: auto;
-  top: 700px;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  animation: spin 3s linear infinite;
-}
-
-.fa-check {
-  z-index: 2;
-  color: red;
-  font-size: 3rem;
-}
-
-.bloc-check {
-  width: 90px;
-  height: 100%;
-  background-color: #15DEA5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 0;
-  transform: translateX(100%);
-  transition: transform 0.8s ease-out;
-}
-.bloc-check .icon_check {
-  position: unset;
-  font-size: 2rem;
-  color: #FFF;
-  transform: rotate(0deg);
-  transition: 0.7s linear;
-}
-
-.menu .dish__comment__price {
-  transition: 0.7s ease-out;
-}
-.menu__dish:hover .bloc-check {
-  transform: translateX(0);
-}
-.menu__dish:hover .bloc-check .icon_check {
-  transform: rotate(360deg);
-  transition: 0.7s linear;
-  font-size: 2rem;
-  color: #FFF;
-  position: unset;
-}
-.menu__dish:hover .dish__name {
-  width: 75%;
-}
-.menu__dish:hover .dish__comment__price {
-  width: 78%;
-}
-
-.section__menu .heart__icon:hover {
-  color: #9356DC;
-}
-.section__menu .heart__icon:hover .heart__icon_anime {
-  transform: scale(1);
-  transform-origin: bottom;
-  transition: 0.4s linear;
-  color: #9356DC;
-}
-
-.loader__page {
-  position: fixed;
-  left: 0px;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #FFF;
-  z-index: -1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loader {
-  height: 110px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  z-index: 0;
-}
-.loader__bar {
-  background-color: #15DEA5;
-  height: 10px;
-  border-radius: 15px;
-}
-
 .header {
   box-shadow: 2px 2px 5px rgba(22, 22, 22, 0.3);
   display: flex;
@@ -1063,19 +1047,12 @@ a {
   position: relative;
 }
 .section__menu .heart__icon {
-  position: absolute;
   right: 30px;
   top: 35px;
   font-size: 2rem;
 }
 .section__menu .heart__icon_anime {
   font-size: 1.95rem;
-  position: absolute;
-  right: 0px;
-  transform: scale(0);
-  transition: transform 0.5s ease-out;
-  transform-origin: bottom;
-  color: #9356DC;
 }
 
 .menu {

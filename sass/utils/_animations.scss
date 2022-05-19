@@ -1,80 +1,4 @@
-// Animation loader
-.loader__page {
-    animation: container_loader 3.5s;
-    transform: scaleY(0);
-    // opacity: 0;
-}
-
-.loader {
-    &__bar {
-        @for $i from 1 through $num-bars {
-            &--#{$i} {
-
-                width: $width-bar * $i;
-
-                @keyframes bars__test#{$i} {
-                    0% {
-                        transform: perspective(0px) scaleZ($i / 10) translateZ(0rem);
-
-                    }
-
-                    100% {
-                        transform: scaleZ(1 - $i / 10) translateZ(.1rem);
-
-                    }
-
-                }
-
-                animation: bars__test#{$i} 1.6s 2 ease;
-                animation-delay: $anim-delay-test * $i;
-
-                &.inv {
-                    background-color: $color-bars-inv;
-                }
-            }
-        }
-    }
-}
-
-
-@keyframes container_loader {
-    0% {
-        transform: scaleY(1);
-        // opacity: 1;
-        z-index: 1000;
-    }
-
-    80% {
-        transform: scaleY(1);
-        // opacity: 1;
-        z-index: 1000;
-    }
-}
-
-// Animation heart on the cards
-
-.card {
-    &__content {
-        & .heart__icon {
-            &:hover {
-                color: $color-primary;
-
-                & .heart__icon_anime {
-                    transform: scale(1);
-                    transform-origin: bottom;
-                    transition: 0.4s linear;
-                    color: $color-primary;
-                }
-            }
-        }
-    }
-
-}
-
-
 // Animation appearance menus
-
-
 .menu {
     &__name {
         animation: animation__name 1s ease-in;
@@ -199,17 +123,16 @@
 
 // Animation heart menus top
 
-.section__menu {
-    & .heart__icon {
-        &:hover {
-            color: $color-primary;
 
-            & .heart__icon_anime {
-                transform: scale(1);
-                transform-origin: bottom;
-                transition: 0.4s linear;
-                color: $color-primary;
-            }
+.heart__icon {
+    &:hover {
+        color: $color-primary;
+
+        & .heart__icon_anime {
+            transform: scale(1);
+            transform-origin: bottom;
+            transition: 0.4s linear;
+            color: $color-primary;
         }
     }
 }

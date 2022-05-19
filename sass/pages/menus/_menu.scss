@@ -18,7 +18,6 @@
     position: relative;
 
     & .heart__icon {
-        position: absolute;
         right: 30px;
         top: 35px;
         font-size: 2rem;
@@ -26,13 +25,6 @@
 
     & .heart__icon_anime {
         font-size: 1.95rem;
-        position: absolute;
-        right: 0px;
-        transform: scale(0);
-        transition: transform 0.5s ease-out;
-        transform-origin: bottom;
-        color: $color-primary;
-
     }
 }
 

@@ -1,0 +1,27 @@
+.heart__icon {
+    position: absolute;
+}
+.heart__icon_anime {
+    position: absolute;
+    right: 0px;
+    transform: scale(0);
+    transition: transform 0.5s ease-out;
+    transform-origin: bottom;
+    color: $color-primary;
+}
+
+// Animation heart
+
+
+.heart__icon {
+    &:hover {
+        color: $color-primary;
+
+        & .heart__icon_anime {
+            transform: scale(1);
+            transform-origin: bottom;
+            transition: 0.4s linear;
+            color: $color-primary;
+        }
+    }
+}

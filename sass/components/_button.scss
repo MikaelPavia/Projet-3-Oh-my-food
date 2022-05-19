@@ -8,9 +8,11 @@
     font-size: 1.3rem;
     @include shadow;
     cursor: pointer;
+    transition: all 200ms;
     &:hover {
-        background: #FF76D9;
+        background: $color-button-light;
         @include shadow-hover;
+        transform: translateY(-5%);
     }
 }
 

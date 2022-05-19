@@ -1,0 +1,80 @@
+.loader__page {
+    position: fixed;
+    left: 0px;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #FFF;
+    z-index: -1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 0;
+
+
+    &__bar {
+        background-color: $color-bars;
+        height: 10px;
+        border-radius: 15px;
+    }
+}
+
+// Animation loader
+.loader__page {
+    animation: container_loader 3.5s;
+    transform: scaleY(0);
+    // opacity: 0;
+}
+
+.loader__bar {
+        @for $i from 1 through $num-bars {
+            &--#{$i} {
+
+                width: $width-bar * $i;
+
+                @keyframes bars__test#{$i} {
+                    0% {
+                        transform: perspective(0px) scaleZ(calc($i / 10)) translateZ(0rem);
+
+                    }
+
+                    100% {
+                        transform: scaleZ(calc(1 - $i / 10)) translateZ(.1rem);
+
+                    }
+
+                }
+
+                animation: bars__test#{$i} 1.6s 2 ease;
+                animation-delay: $anim-delay-test * $i;
+
+                &.inv {
+                    background-color: $color-bars-inv;
+                }
+            }
+        }
+    }
+
+
+
+@keyframes container_loader {
+    0% {
+        transform: scaleY(1);
+        // opacity: 1;
+        z-index: 1000;
+    }
+
+    80% {
+        transform: scaleY(1);
+        // opacity: 1;
+        z-index: 1000;
+    }
+}
