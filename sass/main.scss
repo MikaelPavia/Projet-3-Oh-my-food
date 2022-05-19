@@ -4,9 +4,10 @@
 @import "./base/normalize";
 @import "./base/general-style";
 @import "./base/typography";
+@import "./components/loader";
 @import "./components/card";
 @import "./components/button";
-@import "./components/loader";
+@import "./components/heart-animation";
 @import "./layout/header";
 @import "./layout/footer";
 @import "./pages/accueil/place";

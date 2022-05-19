@@ -489,85 +489,6 @@ h1 {
   font-weight: normal;
   font-style: normal;
 }
-.card {
-  display: flex;
-  flex-direction: column;
-  height: 260px;
-  border-radius: 25px;
-  margin-top: 20px;
-  box-shadow: 2px 2px 5px rgba(22, 22, 22, 0.3);
-  max-width: 650px;
-}
-.card__image {
-  height: 70%;
-  border-radius: 25px 25px 0 0;
-  position: relative;
-}
-.card__image img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 25px 25px 0 0;
-}
-.card__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 0 0 25px 25px;
-  margin-left: 15px;
-  height: 30%;
-  font-size: 1.1rem;
-  position: relative;
-}
-.card__content h4 {
-  margin: 0 0 10px 0;
-  font-size: 1.2rem;
-}
-.card__content .heart__icon {
-  font-size: 1.6rem;
-  right: 20px;
-}
-.card__content .heart__icon_anime {
-  font-size: 1.55rem;
-}
-
-.new {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background-color: #99E2D0;
-  color: #278870;
-  width: 90px;
-  height: 20px;
-  text-align: center;
-  padding: 5px 0 5px 0;
-  border-radius: 3px;
-  font-weight: bold;
-}
-
-@media all and (min-width: 992px) {
-  .card {
-    min-width: 280px;
-  }
-}
-.btn {
-  height: 55px;
-  width: 260px;
-  background: linear-gradient(to top, #9356DC, #FF79DA);
-  border-radius: 40px;
-  border: 0;
-  color: white;
-  font-size: 1.3rem;
-  box-shadow: 2px 2px 5px rgba(22, 22, 22, 0.3);
-  cursor: pointer;
-  transition: all 200ms;
-}
-.btn:hover {
-  background: linear-gradient(to top, #a16be0, #ff93e1);
-  box-shadow: 5px 5px 5px rgba(22, 22, 22, 0.3);
-  transform: translateY(-5%);
-}
-
 .loader__page {
   position: fixed;
   left: 0px;
@@ -675,6 +596,108 @@ h1 {
     z-index: 1000;
   }
 }
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 260px;
+  border-radius: 25px;
+  margin-top: 20px;
+  box-shadow: 2px 2px 5px rgba(22, 22, 22, 0.3);
+  max-width: 650px;
+}
+.card__image {
+  height: 70%;
+  border-radius: 25px 25px 0 0;
+  position: relative;
+}
+.card__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0 0 25px 25px;
+  margin-left: 15px;
+  height: 30%;
+  font-size: 1.1rem;
+  position: relative;
+}
+.card__content h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+}
+.card__content .heart__icon {
+  font-size: 1.6rem;
+  right: 20px;
+}
+.card__content .heart__icon_anime {
+  font-size: 1.55rem;
+}
+
+.new {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #99E2D0;
+  color: #278870;
+  width: 90px;
+  height: 20px;
+  text-align: center;
+  padding: 5px 0 5px 0;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+@media all and (min-width: 992px) {
+  .card {
+    min-width: 280px;
+  }
+}
+.btn {
+  height: 55px;
+  width: 260px;
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  border-radius: 40px;
+  border: 0;
+  color: white;
+  font-size: 1.3rem;
+  box-shadow: 2px 2px 5px rgba(22, 22, 22, 0.3);
+  cursor: pointer;
+  transition: all 200ms;
+}
+.btn:hover {
+  background: linear-gradient(to top, #a16be0, #ff93e1);
+  box-shadow: 5px 5px 5px rgba(22, 22, 22, 0.3);
+  transform: translateY(-5%);
+}
+
+.heart__icon {
+  position: absolute;
+}
+
+.heart__icon_anime {
+  position: absolute;
+  right: 0px;
+  transform: scale(0);
+  transition: transform 0.5s ease-out;
+  transform-origin: bottom;
+  color: #9356DC;
+}
+
+.heart__icon:hover {
+  color: #9356DC;
+}
+.heart__icon:hover .heart__icon_anime {
+  transform: scale(1);
+  transform-origin: bottom;
+  transition: 0.4s linear;
+  color: #9356DC;
+}
+
 .header {
   box-shadow: 2px 2px 5px rgba(22, 22, 22, 0.3);
   display: flex;
